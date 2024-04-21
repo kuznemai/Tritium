@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f8f84f2b-9d41-46a6-9669-d2e4913b4199" name="stage.h3.se">
+        <fileTransfer accessType="SFTP" host="185.9.0.178" port="22" sshConfigId="6927a2fd-5100-4194-af45-d9a8c4c4f5c3" sshConfig="root@stage.h3.se:22" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

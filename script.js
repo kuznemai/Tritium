@@ -42,8 +42,8 @@ window.addEventListener('scroll', animateScrollingElements);
 
 
 // Аккордеон
-function accordion() {
-    let accordionElems = document.getElementsByClassName("accordion");
+function accordeon() {
+    let accordionElems = document.getElementsByClassName("accordeon");
     let emptyArr;
     for (let i = 0; i < accordionElems.length; i++) {
         accordionElems[i].addEventListener('click', function () {
@@ -61,7 +61,7 @@ function accordion() {
     }
 }
 
-accordion();
+accordeon();
 
 
 
@@ -86,4 +86,12 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
 
 
 
+window.addEventListener('scroll', function() {
+    var circle = document.querySelector('.circle');
+    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPosition = window.scrollY;
+    var percentage = scrollPosition / maxScroll;
+    var circleTop = percentage * 100;
 
+    circle.style.top = circleTop + 'vh';
+});

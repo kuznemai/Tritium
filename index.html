@@ -4,151 +4,181 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="script.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <!--meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"-->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
-<header>
-    <div class="header_wrapper">
-        <div class="horizontal_menu">
-            <div><img src="img/logo%20with%20name.svg"></div>
-            <div>
-            <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-            <label for="burger-checkbox" class="burger"></label>
-                <ul class="header_wrapper_menu">
-                    <li><a href="index.html" class="menu-item">Home</a></li>
-                    <li><a href="company.html" class="menu-item">About us</a></li>
-                    <li><a href="services.html" class="menu-item">Services</a></li>
-                    <li><a href="contactus.html" class="menu-item">Contact us</a></li>
+<header class="header">
+    <div class="header__container">
+        <div class="header__top-bar">
+            <div class="header__logo"><img src="img/logo%20with%20name.svg" alt="Company Logo"></div>
+            <div class="header__navigation">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+                <ul class="header__menu">
+                    <li><a href="index.html" class="header__menu-item">Home</a></li>
+                    <li><a href="company.html" class="header__menu-item">About us</a></li>
+                    <li><a href="services.html" class="header__menu-item">Services</a></li>
+                    <li><a href="contactus.html" class="header__menu-item">Contact us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="header_wrapper_image"></div>
-        <div class="header_wrapper_content">
-            <h1>Secure your development <br> environment for <br>the unexpected</h1>
-            <a href="https://t.me/Dukeh3" target="_blank" class="button">Contact us</a>
+
+        <div class="header__image">
+            <img src="img/swan.png" alt="Decorative swan image">
+        </div>
+        <div class="header__content">
+            <div class="header__title"><h1>Secure your development environment for the unexpected</h1></div>
+            <div><a href="https://t.me/Dukeh3" target="_blank" class="header__cta-button">Contact us</a></div>
         </div>
     </div>
 </header>
-<wrapper>
 
-    <section class="values">
-        <div class="values_headliner"><h1>Get your development environment ready for the unexpected.</h1></div>
+<main class="main-content">
+    <section class="statistics container fade-in">
+        <div class="statistics__headline"><h2>Get your development environment ready for the unexpected.</h2></div>
 
-        <div class="values_content">
+        <div class="statistics__grid">
 
-            <div class="values_content_elements">
+            <div class="statistics__item">
                 <div><h2>$ 10.5 Trillion</h2></div>
-                <div><p>According to a report by Cybersecurity Ventures, the global cost of cybercrime is projected to reach $10.5 trillion annually by 2025, up from $3 trillion in 2015. This makes cybersecurity not just an IT issue, but a significant business risk.</p></div>
+                <div><p>According to a report by Cybersecurity Ventures, the global cost of cybercrime is projected to
+                    reach $10.5 trillion annually by 2025, up from $3 trillion in 2015. This makes cybersecurity not
+                    just an IT issue, but a significant business risk.</p></div>
             </div>
 
-            <div class="values_content_elements">
-                <div><h2 >90 % of attacks</h2></div>
-                <div><p>90% of cyber attacks involve social engineering tactics. Security is now everyone’s responsibility. Companies should provide employees with regular training and testing of the workforce for cybersecurity best practices to help them recognize and avoid social engineering tactics. This includes phishing attacks, pretexting, and baiting.</p></div>
+            <div class="statistics__item">
+                <div><h2>90 % of attacks</h2></div>
+                <div><p>90% of cyber attacks involve social engineering tactics. Security is now everyone's
+                    responsibility. Companies should provide employees with regular training and testing of the
+                    workforce for cybersecurity best practices to help them recognize and avoid social engineering
+                    tactics. This includes phishing attacks, pretexting, and baiting.</p></div>
             </div>
 
-            <div class="values_content_elements">
-                <div><h2 >40 % of attacks</h2></div>
-                <div><p>40% of cyber attacks are aimed at small businesses. Small businesses should prioritize investing in cybersecurity defenses, including employee training and regular security audits. See further advice for small businesses from the Federal Communications Commission.</p></div>
+            <div class="statistics__item">
+                <div><h2>40 % of attacks</h2></div>
+                <div><p>40% of cyber attacks are aimed at small businesses. Small businesses should prioritize investing
+                    in cybersecurity defenses, including employee training and regular security audits. See further
+                    advice for small businesses from the Federal Communications Commission.</p></div>
             </div>
 
-            <div id="no-boarder" class="values_content_elements">
-                <div><h2 >96 % of attacks</h2></div>
-                <div><p >96% of cyber attacks begin with a spear-phishing email. Companies should provide regular training to employees to help them recognize and avoid phishing attacks. Additionally, companies can adopt lateral movement cybersecurity and adopt zero trust methodology to prevent the spread of attacks, plus implement email filtering tools that can identify and block malicious emails.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="intruduction ">
-        <div><h1>IZ to be safe</h1></div>
-<!--        <div><p>While cybercrime is nothing new, it has been here ever since before the start of the internet. New political realities have increased the awareness of an advanced persistent threat (APT) that not only can penetrate even well managed corporate networks, but also can use the corporation's source-code to perform advanced supply-chain attacks on the corporation's customers. It's therefore important that corporations organize their development environment in a layered defense forming a decentralized defense in depth based on a zero-trust architecture, free from single points of failure that can cause catastrophic exploits.</p></div>-->
-            <div><p>Facing cybersecurity challenges can sometimes bring a lot of negative experience, huge losses and risking the company's reputation. Our team, Tritium Cybersecurity, invented a unique project called IZ. IZ is a secure development enviroment, which helps your company to protect the data in every possible level. IZ is designed to withstand the forces of cyber threats and regulatory complexity. It's IZ to be safe!</p></div>
-    </section>
-
-    <section class="description">
-        <div class="description_content">
-            <div class="description_content_element element-animation">
-                <div class="description_content_image"><img src="img/hands.png"></div>
-                <h1>SUPPORT</h1>
-                <p>Our team is ready to support your company and guide you through all the cybersecurity regulations.</p>
-                <div class="description_content_image"><img src="img/protect.png"></div>
-
-                <h1>SOLUTIONS</h1>
-                <p>We are happy to help your company hto reduce cyber risk and enhance security defenses by using our IZ software that protects business-critical applications and data. We offer you a suite of integrated cybersecurity software solutions to provide end-to-end coverage and visibility across an environment.</p>
-
-            </div>
-            <div class="logo-container">
-                <img class="element-to-animate"src="img/blueeee-logo.svg">
-            </div>
-            <div class="description_content_element element-animation">
-                <div class="description_content_image"><img src="img/structure.png"></div>
-                <h1>SUITABLE FOR EVERYTHING</h1>
-                <p>Our services are suitable for both small and large companies with complex systems. No matter what, we are for clarity in every step of our system implementation.</p>
-                <div class="description_content_image"><img src="img/security-blue.png"></div>
-                <h1>PROTECTION</h1>
-                <p>We are ready to provide for your organizations specific needs, to explain and to build the structure of defensing system suitable for your company. So you can enjoy the peace of mind while we are guarding your company's safety! </p>
+            <div id="no-border" class="statistics__item">
+                <div><h2>96 % of attacks</h2></div>
+                <div><p>96% of cyber attacks begin with a spear-phishing email. Companies should provide regular
+                    training to employees to help them recognize and avoid phishing attacks. Additionally, companies can
+                    adopt lateral movement cybersecurity and adopt zero trust methodology to prevent the spread of
+                    attacks, plus implement email filtering tools that can identify and block malicious emails.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="services_block">
-        <div class="services_block_element">
-        <div class="element-animation"><h1>Threats identification</h1></div>
-        <div class="element-animation"><p>Our team will help you to identify potential threats and vulnerabilities. It will help you to understand the weak spots and to take the vital desicions in advance.</p></div>
-        </div>
-        <div class="services_block_element">
-            <div class="element-animation"><h1>Security plan</h1></div>
-            <div class="element-animation"><p>Based on that analyses, we will make a security plan of actions. We support you in every step of implementation and explain those steps to you.</p></div>
-        </div>
-
-        <div class="services_block_element">
-            <div class="element-animation"><h1>Vulnerability Management</h1></div>
-            <div class="element-animation"><p>Once we implement our system, we provide for a continuous monitoring of your systems for any signs of a cyber attack. </p></div>
-        </div>
-
-        <div class="services_block_element">
-            <div class="element-animation"><h1>Quick response</h1></div>
-            <div class="element-animation"><p>When the cyber atack hits, we not only defend, we prepare the future plan of defense according to the type and details of attack. Our system is flexible and trustable. </p></div>
-        </div>
-
-
-
-    </section>
-
-    <section class="content">
-        <div class="content_blue element-animation">
-           <div><h1>Safe developement enviroment is our number one priority</h1></div>
-            <div><p>Patent-pending methods for identifying cyber, operational and geopolitical risk using advanced AI algorithms.</p></div>
+    <section class="intruduction container fade-in">
+        <div><h2>IZ to be safe</h2></div>
+        <div><p>Facing cybersecurity challenges can sometimes bring a lot of negative experience, huge losses and
+            risking the company's reputation. Our team, Tritium Cybersecurity, invented a unique project called IZ. IZ
+            is a secure development enviroment, which helps your company to protect the data in every possible level. IZ
+            is designed to withstand the forces of cyber threats and regulatory complexity. It's IZ to be safe!</p>
         </div>
     </section>
 
-    <section class="content_white">
-        <div class="content_left_block element-animation">
+    <section class="features container">
+        <div class="features__content">
+            <div class="features__card fade-in">
+                <div class="features__image"><img src="img/hands.png" alt="Support illustration"></div>
+                <h2>SUPPORT</h2>
+                <p>Our team is ready to support your company and guide you through all the cybersecurity
+                    regulations.</p>
+                <div class="features__image"><img src="img/protect.png" alt="Protection illustration"></div>
+
+                <h2>SOLUTIONS</h2>
+                <p>We are happy to help your company hto reduce cyber risk and enhance security defenses by using our IZ
+                    software that protects business-critical applications and data. We offer you a suite of integrated
+                    cybersecurity software solutions to provide end-to-end coverage and visibility across an
+                    environment.</p>
+            </div>
+            <div class="features__logo-container">
+                <img class="features__logo-animation" src="img/blueeee-logo.svg" alt="Company logo">
+            </div>
+            <div class="features__card fade-in">
+                <div class="features__image"><img src="img/structure.png" alt="Structure illustration"></div>
+                <h2>SUITABLE FOR EVERYTHING</h2>
+                <p>Our services are suitable for both small and large companies with complex systems. No matter what, we
+                    are for clarity in every step of our system implementation.</p>
+                <div class="features__image"><img src="img/security-blue.png" alt="Security illustration"></div>
+                <h2>PROTECTION</h2>
+                <p>We are ready to provide for your organizations specific needs, to explain and to build the structure
+                    of defensing system suitable for your company. So you can enjoy the peace of mind while we are
+                    guarding your company's safety!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services_block container fade-in">
+        <div class="services_block_elements">
+            <div class="services_block_element element-animation"><h2>Threats identification</h2></div>
+            <div class="services_block_element element-animation"><p>Our team will help you to identify potential
+                threats and vulnerabilities.
+                It will help you to understand the weak spots and to take the vital desicions in advance.</p></div>
+        </div>
+        <div class="services_block_elements">
+            <div class="services_block_element element-animation"><h2>Security plan</h2></div>
+            <div class="services_block_element element-animation"><p>Based on that analyses, we will make a security
+                plan of actions. We
+                support you in every step of implementation and explain those steps to you.</p></div>
+        </div>
+
+        <div class="services_block_elements">
+            <div class="services_block_element element-animation"><h2>Vulnerability Management</h2></div>
+            <div class="services_block_element element-animation"><p>Once we implement our system, we provide for a
+                continuous monitoring of
+                your systems for any signs of a cyber attack. </p></div>
+        </div>
+
+        <div class="services_block_elements">
+            <div class="services_block_element element-animation"><h2>Quick response</h2></div>
+            <div class="services_block_element element-animation"><p>When the cyber atack hits, we not only defend, we
+                prepare the future plan
+                of defense according to the type and details of attack. Our system is flexible and trustable. </p></div>
+        </div>
+    </section>
+
+    <section class="cta-section container">
+        <div class="cta-section__blue fade-in">
+            <div><h2>Safe developement enviroment is our number one priority</h2></div>
+            <div><p>Patent-pending methods for identifying cyber, operational and geopolitical risk using advanced AI
+                algorithms.</p></div>
+        </div>
+    </section>
+
+    <section class="benefits container">
+        <div class="benefits__list fade-in">
             <div>
-                <h1>Discover</h1>
+                <h2>Discover</h2>
                 <p>Autonomous System that scans hundreds of millions of devices and data points</p>
             </div>
             <div>
-                <h1>Synthesize</h1>
+                <h2>Synthesize</h2>
                 <p>Distill and connect disparate data</p>
             </div>
             <div>
-                <h1>Prioritize</h1>
-                <p>Providing only what’s relevant 24/7, on-demand</p>
+                <h2>Prioritize</h2>
+                <p>Providing only what's relevant 24/7, on-demand</p>
             </div>
         </div>
-        <div class="content_right_block element-animation">
-            <h1>Ideal For:</h1>
-            <ul>
+        <div class="benefits__sidebar fade-in">
+            <h2>Ideal For:</h2>
+            <ul class="benefits__uses">
                 <li>Vendor Risk Management</li>
                 <li>M&A</li>
                 <li>Insurance</li>
@@ -156,29 +186,25 @@
                 <li>Business & Supply Risk</li>
                 <li>Government</li>
             </ul>
-            <div class="content_right_block_blue element-animation">
+            <div class="benefits__cta fade-in">
                 <h2>Zero friction implementation, with unparalleled value.</h2>
-                <a href="https://t.me/Dukeh3" target="_blank" class="button">Contact us</a>
+                <a href="https://t.me/Dukeh3" target="_blank" class="benefits__button">Contact us</a>
             </div>
         </div>
     </section>
+</main>
 
-<!--    <div class="container">-->
-<!--        <div class="line"></div>-->
-<!--        <div class="circle"></div>-->
-<!--    </div>-->
-
-
-
-</wrapper>
-
-<footer>
-    <div class="footer_wrapper element-animation">
-        <div>
-            <div><img src="img/email.png"><a href="rene.malmgren@gmail.com" target="_blank">rene.malmgren@gmail.com</a></div>
-            <div><img src="img/phone.png"><p>+971 052 929 9785</p></div>
-            <div><img src="img/telegram.png"><a href="https://t.me/Dukeh3" target="_blank">Telegram</a></div>
-            <div><img src="img/location.png"><p>Dubai, Emaar 6, Al Mesk tower</p></div>
+<footer class="footer">
+    <div class="footer__container fade-in container">
+        <div class="footer__contact-info">
+            <div><img src="img/email.png" alt="Email icon"><a href="rene.malmgren@gmail.com" target="_blank">rene.malmgren@gmail.com</a>
+            </div>
+            <div><img src="img/phone.png" alt="Phone icon">
+                <p>+971 052 929 9785</p></div>
+            <div><img src="img/telegram.png" alt="Telegram icon"><a href="https://t.me/Dukeh3"
+                                                                    target="_blank">Telegram</a></div>
+            <div><img src="img/location.png" alt="Location icon">
+                <p>Dubai</p></div>
         </div>
     </div>
 </footer>

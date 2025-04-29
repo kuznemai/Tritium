@@ -1,22 +1,20 @@
-// Плавное появление элементов
-function onEntry(entry) {
+// Плавное появление элементов (fade-in)
+function onEntry(entry, observer) {
     entry.forEach(change => {
         if (change.isIntersecting) {
-            change.target.classList.add('element-show');
+            change.target.classList.add('fade-in-visible');
+            observer.unobserve(change.target); // Разнаблюдаем после появления
         }
     });
 }
 
-let options = {threshold: [0.5]};
+let options = { threshold: [0.1] };
 let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.element-animation');
-for (let elm of elements) {
-    observer.observe(elm);
-}
 
+let elements = document.querySelectorAll('.fade-in');
+elements.forEach(elm => observer.observe(elm));
 
-//анимация
-
+// Анимация появления при скролле
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
@@ -29,69 +27,81 @@ function isElementInViewport(el) {
 
 function animateScrollingElements() {
     const els = document.querySelectorAll('.element-to-animate');
-    els.forEach((elem) => {
+    els.forEach(elem => {
         if (isElementInViewport(elem)) {
-        elem.classList.add('animated');
-    }
-});
+            elem.classList.add('animated');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', animateScrollingElements);
 window.addEventListener('scroll', animateScrollingElements);
 
-
-
-// Аккордеон
+// Аккордеон с анимацией высоты
 function accordeon() {
-    let accordionElems = document.getElementsByClassName("accordeon");
-    let emptyArr;
-    for (let i = 0; i < accordionElems.length; i++) {
-        accordionElems[i].addEventListener('click', function () {
+    const accordionElems = document.querySelectorAll(".accordeon");
+
+    accordionElems.forEach((elem) => {
+        elem.addEventListener('click', function () {
             this.classList.toggle("active");
-            this.parentElement.classList.toggle("active");
+            const panel = this.nextElementSibling;
 
-
-            let pannel = this.nextElementSibling;
-            if (pannel.style.display === "block") {
-                pannel.style.display = "none";
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
             } else {
-                pannel.style.display = "block";
+                panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
-    }
+    });
 }
 
 accordeon();
 
-
-
-//////////Form
-
+// Обработка формы отправки через fetch
 document.getElementById('feedbackForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-    // Здесь будет код для отправки данных на сервер
+    const formData = {
+        name,
+        email,
+        message
+    };
 
-    alert('Сообщение отправлено!');
-    this.reset();
+    // Пример отправки на сервер (замени '/send-message' на свой реальный URL)
+    fetch('/send-message', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+        .then(response => {
+            if (response.ok) {
+                alert('Сообщение успешно отправлено!');
+                this.reset();
+            } else {
+                alert('Ошибка при отправке. Пожалуйста, попробуйте позже.');
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Ошибка при отправке.');
+        });
 });
 
-
-
-
-
-
-
+// Анимация круга при прокрутке
 window.addEventListener('scroll', function() {
-    var circle = document.querySelector('.circle');
-    var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    var scrollPosition = window.scrollY;
-    var percentage = scrollPosition / maxScroll;
-    var circleTop = percentage * 100;
+    const circle = document.querySelector('.circle');
+    if (!circle) return;
+
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const percentage = scrollPosition / maxScroll;
+    const circleTop = percentage * 100;
 
     circle.style.top = circleTop + 'vh';
 });
